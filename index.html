@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Splitter - Tip Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<header>
+  <img src="https://raw.githubusercontent.com/OliverCadman/js_projects/f3670244aa217aa52960d6130042fb1eb0c812ad/tip-calculator-app-main/images/logo.svg" alt="logo">
+</header>
+<body>
+  <div class="container">
+    <div class="splitter-box">
+      <div class="left-box">
+        <div class="input-section">
+          <label for="bill-input">Bill</label>
+          <input type="number" id="bill-input" placeholder="$0.00">
+        </div>
+        <div class="tip-section">
+          <label>Select Tip %</label>
+          <div class="tip-buttons">
+            <button class="tip-button active">5%</button>
+            <button class="tip-button">10%</button>
+            <button class="tip-button">15%</button>
+            <button class="tip-button">25%</button>
+            <button class="tip-button">50%</button>
+            <div class="custom-tip-container">
+              <input type="number" id="custom-tip-input" min="0.0" max="100.0" placeholder="Custom" />
+              <label for="custom-tip-input"></label>
+            </div>
+          </div>
+        </div>
+        <div class="people-section">
+          <label for="people-input">Number of People</label>
+          <input type="number" id="people-input" placeholder="1">
+        </div>
+      </div>
+      <div class="right-box">
+        <div class="output-section">
+          <label>Tip Amount Per Person</label>
+          <div id="tip-amount">$0.00</div>
+        </div>
+        <div class="output-section">
+          <label>Total Per Person</label>
+          <div id="total-amount">$0.00</div>
+        </div>
+        <button id="reset-button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

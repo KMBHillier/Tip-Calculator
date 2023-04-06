@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+header img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 50px;
+}
+
+
+body {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(184, 46%, 76%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.splitter-box {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 50vw;
+  height: 25vw;
+}
+
+.left-box,
+.right-box {
+  flex-basis: 50%;
+  max-width: 50%;
+  margin: 30px;
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  font-weight: 700
+}
+
+.left-box {
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-box {
+  width: 50%;
+  padding: 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: hsla(183, 95%, 13%, 1);
+  border-radius: 20px;
+  color: white;
+}
+
+.right-container {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+.input-section label,
+.tip-section label,
+.people-section label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.input-section input,
+.tip-section button,
+.custom-tip-input input,
+.people-section input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+}
+
+.tip-section {
+  margin-bottom: 20px;
+}
+
+.tip-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.tip-button,
+.custom-tip-container input {
+  flex-basis: 32%;
+  margin-right: 2%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: hsla(183, 95%, 13%, 1);
+  color: hsla(0, 100%, 100%, 1);
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tip-button:hover,
+.tip-button.active {
+  background-color: hsl(179, 53%, 40%);
+  color: hsla(183, 95%, 13%, 1);
+}
+
+.custom-tip-container {
+  display: flex;
+  align-items: center;
+}
+
+
+.people-section {
+  margin-bottom: 20px;
+}
+
+.output-section {
+  margin-bottom: 20px;
+}
+
+.output-section label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#tip-amount,
+#total-amount {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: hsla(179, 53%, 40%);
+}
+
+#reset-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: hsla(179, 53%, 40%);
+  color: hsla(183, 95%, 13%, 1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#reset-button:hover {
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #333;
+}
+
+/* CSS for a screen size of 375px */
+@media screen and (max-width: 375px) {
+/* Adjust the layout of the header */
+header {
+height: auto;
+padding: 20px 0;
+}
+
+header img {
+position: static;
+transform: none;
+padding: 0;
+margin-bottom: 20px;
+}
+
+/* Adjust the layout of the left and right boxes */
+.splitter-box {
+flex-direction: column;
+height: auto;
+width: 90%;
+}
+
+.left-box, .right-box {
+width: 100%;
+padding: 20px;
+margin: 0;
+font-size: 20px;
+}
+
+.right-box {
+padding: 40px;
+}
+
+/* Adjust the layout of input and output sections */
+.input-section, .tip-section, .people-section, .output-section {
+margin: 20px 0;
+}
+
+.tip-buttons {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.tip-button, .custom-tip-container input {
+flex-basis: 48%;
+margin-right: 0;
+margin-bottom: 10px;
+font-size: 16px;
+padding: 10px;
+}
+}
